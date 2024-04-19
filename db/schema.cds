@@ -63,7 +63,8 @@ entity Products {
         Supplier_Id      : UUID;
         ToSupplier       : Association to one Suppliers
                                on ToSupplier.ID = Supplier_Id;
-
+        UnitOfMeasures_ID : String(2) ;
+        ToUnitOfMeasures : Association to UnitOfMeasures on ToUnitOfMeasures.ID = UnitOfMeasures_ID;
 }
 
 entity Suppliers {
